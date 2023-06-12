@@ -1,0 +1,412 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\fswiss\fprq2\fcharset0 Calibri;}{\f2\fmodern\fprq1\fcharset0 Courier New;}}
+{\colortbl ;\red0\green0\blue0;\red255\green0\blue0;}
+{\*\generator Riched20 10.0.19041}{\*\mmathPr\mnaryLim0\mdispDef1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\brdrb\brdrs\brdrw75\brdrcf1 \nowidctlpar\hyphpar0\li-630\cf1\b\f0\fs28 Chapter 7: How to handle exceptions and validate data\par
+Murach's C#\b0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\fs36\par
+
+\pard\nowidctlpar\hyphpar0\li-630\b\fs22 MULTIPLE CHOICE\b0\fs2\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\fs22\tab 1.\tab Given a text box named txtNum, which of the following statements may cause a format exception?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell\b\f2\fs18 string s = txtNum.Text;\b0\f0\fs22\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\cf0\highlight2\b\f2\fs18 if (txtNum.Text == null) newValue = 0;\b0\f0\fs22\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\cf1\highlight0 c.\cell\b\f2\fs18 if (txtNum.Text == "") newValue = 0;\b0\f0\fs22\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell\b\f2\fs18 decimal d = Convert.ToDecimal(txtNum.Text);\b0\f0\fs22\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 2.\tab The process of checking user entries to make sure they\rquote re valid is called\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell data validation\cell c.\cell debugging\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 exception handling\cell\highlight0 d.\cell refactoring\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 3.\tab The list of methods that were called before an exception occurred is called the\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell method list\cell c.\cell parameter list\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell exception hierarchy\cell d.\cell\highlight2 stack trace\cell\row 
+\pard\nowidctlpar\hyphpar0\highlight0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 4.\tab Exceptions are objects that are created from the _________________ class or one of its subclasses.\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell Error\cell c.\cell FormatException\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell Exception\cell d.\cell OverflowException\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 5.\tab If a value that\rquote s assigned to an int variable is too large to be stored in it, what type of exception occurs?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell Error\cell c.\cell FormatException\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 Exception\cell\highlight0 d.\cell OverflowException\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 6.\tab If a text box entry can\rquote t be converted to a numeric data type, what type of exception occurs?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell Error\cell c.\cell\highlight2 FormatException\highlight0\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell Exception\cell d.\cell OverflowException\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 7.\tab To display a dialog, you can use the Show() method of\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell the DialogBox class\cell c.\cell\highlight2 the MessageBox class\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 b.\cell a DialogBox object\cell d.\cell a MessageBox object\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 8.\tab In a try-catch statement, a catch block for the Exception class can be used to catch\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell casting exceptions\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell arithmetic exceptions\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell\highlight2 format exceptions\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 d.\cell any exceptions that aren\rquote t caught by previous catch blocks\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\fs22\tab 9.\tab Two properties of an object created from the Exception class are\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell Message and ToString\cell c.\cell\highlight2 Message and StackTrace\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 b.\cell StackTrace and Name\cell d.\cell Message and Name\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 10.\tab When you catch an exception, which of its properties can you use to get a description of it?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell\highlight2 Name\cell\highlight0 c.\cell StackTrace\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell Message\cell d.\cell ToString\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 11.\tab When you catch an exception, what method can you use to get the type of the exception?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell GetName()\cell c.\cell GetClass()\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell GetStackTrace()\cell d.\cell\highlight2 GetType()\cell\row 
+\pard\nowidctlpar\hyphpar0\highlight0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 12.\tab In a try-catch statement, the finally block is executed\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell if an exception occurs in the try block\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell if an exception does not occur in the try block\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell if a catch block is executed\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell\highlight2 whether or not an exception occurs or a catch block is executed\cell\row 
+\pard\nowidctlpar\hyphpar0\highlight0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 13.\tab What statement causes an exception to occur?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell finally\cell c.\cell throw\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 catch\cell\highlight0 d.\cell try-catch\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 14.\tab You typically do \i not\i0  throw an exception\par
+\trowd\trgaph45\trleft-45\trrh225\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell when invalid data is detected\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 to test an exception handler\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 c.\cell when the processing that\rquote s done by a method can\rquote t be completed\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell after catching an exception and performing some processing\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 15.\tab When validating data entered into the text boxes of a form, it is \i not\i0  common to check whether\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell all required entries have been made\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell all text entries are non-numeric\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell\highlight2 all numeric entries can be converted to the appropriate data type\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 d.\cell all numeric entries fall within a specified range\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 16.\tab An OverflowException can be avoided by a type of data validation known as\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell numeric checking\cell c.\cell\highlight2 range checking\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx4185\cellx4545\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 b.\cell format checking\cell d.\cell overflow checking\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+\par
+\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 17.\tab You may want to code generic methods for data validation because\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell they\rquote re always more efficient\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 they allow you to reuse your data validation code\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 c.\cell they\rquote re the only way to perform range checking\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell they prevent all exceptions from being thrown\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sa120\tab 18.\tab The code within a catch block is executed when\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell the code in the try block doesn\rquote t compile\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 the code in the try block throws an exception\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 c.\cell the try block finishes executing\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell a runtime error occurs\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sa120\tab 19.\tab Which method of the Decimal class returns a false value if the entry can\rquote t be converted instead of throwing an exception?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell ToDecimal()\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell Parse()\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell\highlight2 TryParse()\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 d.\cell ToString()\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sa120\tab 20.\tab Consider the code that follows. What does it do?\par
+
+\pard\keep\hyphpar0\widctlpar\b\f2\fs18 string value = "2";\par
+try\par
+\{\par
+    int num = Convert.ToInt32(value);\par
+\}\par
+MessageBox.Show("Valid integer");\par
+catch(FormatException)\par
+\{\par
+    MessageBox.Show("Invalid integer");\par
+
+\pard\keep\hyphpar0\widctlpar\sa120\}\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\b0\f0\fs22 a.\cell It displays a dialog box with the message \ldblquote Valid integer\rdblquote .\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell It displays a dialog box with the message \ldblquote Invalid integer\rdblquote .\cell\row\trowd\trgaph45\trleft-45\trrh240\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell\highlight2 The code doesn\rquote t compile.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 d.\cell The code compiles but causes a runtime error.\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\b\page\fs16 Code example 7-1\b0\par
+\b\f2 private void btnCalculate_Click(object sender, System.EventArgs e)\par
+\{\par
+    decimal weightInPounds = 0m;\par
+    try\par
+    \{\par
+        weightInPounds = Convert.ToDecimal(txtPounds.Text);\par
+        if (weightInPounds > 0)\par
+        \{\par
+            decimal weightInKilos = weightInPounds / 2.2m;\par
+            lblKilos.Text = weightInKilos.ToString("f2");\par
+        \}\par
+        else\par
+        \{\par
+            MessageBox.Show("Weight must be greater than 0.", "Entry error");\par
+\tab      txtPounds.Focus();\par
+        \}\par
+    \}\par
+    catch(FormatException)\par
+    \{\par
+        MessageBox.Show("Weight must be numeric.", "Entry error");\par
+        txtPounds.Focus();\par
+    \}\par
+\}\b0\f0\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\fs22\tab 21.\tab (Refer to code example 7-1.) What type of data validation does this program do?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell range checking only\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell valid data type checking only\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell\highlight2 range checking and valid data type checking\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 d.\cell it doesn\rquote t do any data validation\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\fs22\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\tab 22.\tab (Refer to code example 7-1.) If the user clicks the Calculate button without entering data in the text box, what does the code do?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell It calculates the weight in kilograms.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell\highlight2 It causes a runtime error.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 c.\cell It displays a dialog box with the message \ldblquote Weight must be greater than 0.\rdblquote\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell It displays a dialog box with the message \ldblquote Weight must be numeric.\rdblquote\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\fs22\tab 23.\tab (Refer to code example 7-1.) If the user enters -1 in the text box and clicks the Calculate button, what does the code do?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell It calculates the weight in kilograms.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell It causes a runtime error.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell\highlight2 It displays a dialog box with the message \ldblquote Weight must be greater than 0.\rdblquote\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 d.\cell It displays a dialog box with the message \ldblquote Weight must be numeric.\rdblquote\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\fs22\tab 24.\tab (Refer to code example 7-1.) If the user enters \ldblquote 200#\rdblquote  in the text box and clicks the Calculate button, what does the code do?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell It calculates the weight in kilograms.\cell\row\trowd\trgaph45\trleft-45\trrh270\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell It causes a runtime error.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell It displays a dialog box with the message \ldblquote Weight must be greater than 0.\rdblquote\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell\highlight2 It displays a dialog box with the message \ldblquote Weight must be numeric.\rdblquote\cell\row 
+\pard\nowidctlpar\hyphpar0\highlight0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\fs22\tab 25.\tab (Refer to code example 7-1.) If the user enters 118 in the text box and clicks the Calculate button, what does the code do?\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell\highlight2 It calculates the weight in kilograms.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar\highlight0 b.\cell It causes a runtime error.\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell It displays a dialog box with the message \ldblquote Weight must be greater than 0.\rdblquote\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell It displays a dialog box with the message \ldblquote Weight must be numeric.\rdblquote\cell\row 
+\pard\nowidctlpar\hyphpar0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\keep\hyphpar0\widctlpar\fi-630\sb120\sa120\fs22\tab 26.\tab When a statement within a try block causes an exception, the remaining statements in the try block\par
+\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar a.\cell are executed after the statements in the catch block\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar b.\cell are executed before the statements in the catch block\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar c.\cell are executed in the finally block\cell\row\trowd\trgaph45\trleft-45\trpaddl45\trpaddr45\trpaddfl3\trpaddfr3
+\cellx315\cellx8415 
+\pard\intbl\keep\hyphpar0\widctlpar d.\cell\highlight2 aren\rquote t executed\cell\row 
+\pard\nowidctlpar\hyphpar0\highlight0\fs2\par
+
+\pard\nowidctlpar\hyphpar0\sa1\fs12\par
+
+\pard\nowidctlpar\hyphpar0\tx634\tx1958\tx2592\tx3916\tx4550\tx5874\tx6508\fs22\par
+}
+ 
